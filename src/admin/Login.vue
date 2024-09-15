@@ -5,11 +5,11 @@
         <form @submit.prevent="login">
           <div class="mb-4">
             <label class="block">Email:</label>
-            <input v-model="email" type="email" class="w-full p-2 border">
+            <input v-model="email" type="email" class="w-full p-2 border" required>
           </div>
           <div class="mb-4">
             <label class="block">Şifre:</label>
-            <input v-model="password" type="password" class="w-full p-2 border">
+            <input v-model="password" type="password" class="w-full p-2 border" required>
           </div>
           <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Giriş</button>
         </form>
@@ -18,6 +18,8 @@
   </template>
   
   <script>
+  import axios from 'axios';
+  
   export default {
     data() {
       return {
@@ -26,12 +28,23 @@
       }
     },
     methods: {
-      login() {
-        // Basit bir doğrulama kontrolü (şifrelenmemiş)
-        if (this.email === 'admin@example.com' && this.password === 'password') {
-          this.$router.push('/admin')
-        } else {
-          alert('Giriş bilgileri hatalı!')
+      async login() {
+        try {
+          const response = await axios.get('https://66e7327417055714e58bb31d.mockapi.io/users', {
+            params: {
+              email: this.email,
+              password: this.password
+            }
+          });
+          
+          if (response.data.length > 0) {
+            this.$router.push('/admin');
+          } else {
+            alert('Giriş bilgileri hatalı!');
+          }
+        } catch (error) {
+          console.error('Giriş hatası:', error);
+          alert('Bir hata oluştu!');
         }
       }
     }
