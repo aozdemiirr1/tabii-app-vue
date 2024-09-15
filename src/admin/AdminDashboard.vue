@@ -5,7 +5,7 @@
         <h2 class="text-xl font-bold mb-6">Admin Panel</h2>
         <ul class="space-y-4">
           <li>
-            <router-link to="/admin/logo" class="block py-2 px-4 rounded hover:bg-gray-200">Logo Ekleme</router-link>
+            <router-link to="/admin/logos/create" class="block py-2 px-4 rounded hover:bg-gray-200">Logo Ekleme</router-link>
           </li>
           <li>
             <router-link to="/admin/menu" class="block py-2 px-4 rounded hover:bg-gray-200">Menü Yönetimi</router-link>
