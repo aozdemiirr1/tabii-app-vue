@@ -1,30 +1,49 @@
 <template>
     <div class="admin-panel bg-gray-100 min-h-screen flex gap-x-28">
         <Sidebar />
-        <div class="py-4 w-full" style="padding-right: 40px;">
-            <h1 class="text-2xl font-bold mb-6">Logolar</h1>
-            <table class="w-full bg-white shadow rounded">
-                <thead>
-                <tr>
-                    <th class="p-4 border-b">Logo Adı</th>
-                    <th class="p-4 border-b">Logo</th>
-                    <th class="p-4 border-b">İşlemler</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr v-for="logo in logos" :key="logo.id">
-                    <td class="p-4 border-b">{{ logo.name }}</td>
-                    <td class="p-4 border-b"><img :src="logo.imageUrl" alt="Logo" class="h-16" /></td>
-                    <td class="p-4 border-b">
-                    <button @click="editLogo(logo)" class="bg-yellow-500 text-white py-1 px-3 rounded">Düzenle</button>
-                    <button @click="deleteLogo(logo.id)" class="bg-red-500 text-white py-1 px-3 rounded ml-2">Sil</button>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+        <div class="py-4 w-full px-6">
+        <h1 class="text-2xl font-bold mb-6">Logolar</h1>
+        <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+            <thead class="bg-gray-200 border-b border-gray-300">
+            <tr>
+                <th class="p-4 text-left text-gray-700">Logo Adı</th>
+                <th class="p-4 text-left text-gray-700">Logo</th>
+                <th class="p-4 text-left text-gray-700">İşlemler</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="logo in logos" :key="logo.id" class="hover:bg-gray-50">
+                <td class="p-4 border-b border-gray-200">{{ logo.name }}</td>
+                <td class="p-4 border-b border-gray-200">
+                <img :src="logo.imageUrl" alt="Logo" class="h-16 w-16 object-contain" />
+                </td>
+                <td class="p-4 border-b border-gray-200">
+                <button @click="editLogo(logo)" class="bg-yellow-500 text-white py-1 px-3 rounded hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">Düzenle</button>
+                <button @click="deleteLogo(logo.id)" class="bg-red-500 text-white py-1 px-3 rounded ml-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">Sil</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
         </div>
     </div>
-  </template>
+</template>
+
+<style scoped>
+    /* Add additional styles if needed */
+    table {
+    border-collapse: collapse;
+    }
+    thead th {
+    font-weight: 600;
+    }
+    tbody tr {
+    transition: background-color 0.3s ease;
+    }
+    tbody tr:hover {
+    background-color: #f9f9f9;
+    }
+</style>
+  
   
   <script>
   import axios from 'axios';
