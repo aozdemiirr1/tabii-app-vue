@@ -11,6 +11,11 @@
           <button class="flex justify-center items-center h-12 w-36 text-white rounded font-bold text-xl border">Giriş Yap</button>
         </div>
       </div>
+
+      <div class="lex items-center justify-center py-4" style="background-color: #000000;">
+        <h2 class="text-white text-center text-2xl"> tabii'ye Özel İçerikler</h2> 
+        <h3 class="text-white text-center text-2xl">Başka hiçbir yerde bulunmayan özgün içeriklerin dünyasına adım at! </h3>
+      </div>
   
       <!-- Ana içerik burada router-view ile görüntülenecek -->
       <router-view></router-view>
