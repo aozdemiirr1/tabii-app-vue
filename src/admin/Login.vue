@@ -38,7 +38,7 @@
           });
           
           if (response.data.length > 0) {
-            this.$router.push('/admin');
+            this.$router.push('/layouts/admin');
           } else {
             alert('Giriş bilgileri hatalı!');
           }

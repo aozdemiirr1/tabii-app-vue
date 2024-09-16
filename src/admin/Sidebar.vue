@@ -1,6 +1,6 @@
 <template>
     <div class="w-64 bg-white shadow-md p-4">
-        <router-link to="/admin" class="text-xl font-bold mb-6 block">
+        <router-link to="/layouts/admin" class="text-xl font-bold mb-6 block">
              Admin Panel
         </router-link>
       <ul class="space-y-4">
