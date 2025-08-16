@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Login from './admin/Login.vue';
+import Login from './layouts/login.vue';
 import AdminLayout from './layouts/AdminLayout.vue';
-import SiteLayout from './layouts/SiteLayout.vUE';
+import SiteLayout from './layouts/SiteLayout.vue';
 import LogoCreate from './admin/LogoCreate.vue';
 import LogoList from './admin/LogoList.vue';
 import LogoEdit from './admin/LogoEdit.vue';

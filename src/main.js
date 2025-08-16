@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue'; // SiteLayout yerine App.vue'yi yükleyin
 import router from './router';
 import store from './store';
-import './style.css';
+import './assets/main.css';
 
 const app = createApp(App); // App.vue root bileşeni olarak monte edilecek
 app.use(router);
