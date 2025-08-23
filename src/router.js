@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Login from './layouts/login.vue';
+import Register from './layouts/register.vue';
+import ForgotPassword from './layouts/forgot-password.vue';
 import AdminLayout from './layouts/AdminLayout.vue';
 import SiteLayout from './layouts/SiteLayout.vue';
 import LogoCreate from './admin/LogoCreate.vue';
@@ -8,6 +10,8 @@ import LogoEdit from './admin/LogoEdit.vue';
 
 const routes = [
   { path: '/login', component: Login },
+  { path: '/register', component: Register },
+  { path: '/forgot-password', component: ForgotPassword },
   { path: '/layouts/admin', component: AdminLayout },
   { path: '/', component: SiteLayout },
   { path: '/admin/logos', component: LogoList },

@@ -6,7 +6,9 @@
     <!-- Üst menü -->
     <div class="flex flex-row justify-between w-full fixed top-0">
       <div class="py-8 px-24">
-        <img src="https://cms-tabii-public-static.tabii.com/assets/tabii.svg" alt="Tabii Logo" class="w-32">
+        <a @click="$router.push('/')" class="cursor-pointer">
+          <img src="https://cms-tabii-public-static.tabii.com/assets/tabii.svg" alt="Tabii Logo" class="w-32">
+        </a>
       </div>
       <div class="flex flex-row gap-2 py-8 px-24 items-center">
         <button class="flex justify-center items-center h-12 w-24 text-white font-bold text-xl">
@@ -48,7 +50,7 @@
           </div>
           <div class="flex justify-between items-center mb-6">
             <span></span>
-            <a href="#" class="text-gray-300 text-sm hover:underline">Şifreni mi unuttun?</a>
+            <a @click="$router.push('/forgot-password')" class="text-gray-300 text-sm hover:underline cursor-pointer">Şifreni mi unuttun?</a>
           </div>
           <button
             type="submit"
