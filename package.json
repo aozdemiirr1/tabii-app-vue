@@ -1,25 +1,22 @@
 {
-  "name": "vueadminpanel",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "tabii-app",
+  "version": "1.0.0",
+  "description": "Tabii App with Vue.js frontend and Strapi backend",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "frontend:dev": "cd frontend && pnpm run dev",
+    "frontend:build": "cd frontend && pnpm run build",
+    "frontend:preview": "cd frontend && pnpm run preview",
+    "backend:dev": "cd backend && pnpm run develop",
+    "backend:start": "cd backend && pnpm run start",
+    "backend:build": "cd backend && pnpm run build",
+    "dev": "concurrently \"pnpm run frontend:dev\" \"pnpm run backend:dev\"",
+    "install:all": "pnpm install && cd frontend && pnpm install && cd ../backend && pnpm install",
+    "build:all": "pnpm run frontend:build && pnpm run backend:build"
   },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.12",
-    "axios": "^1.7.7",
-    "vue": "^3.4.37",
-    "vue-router": "^4.4.5",
-    "vuex": "^4.1.0"
-  },
+  "keywords": ["vue", "strapi", "fullstack"],
+  "author": "",
+  "license": "MIT",
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.2.4",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17",
-    "vite": "^5.4.1"
+    "concurrently": "^8.2.2"
   }
 }
