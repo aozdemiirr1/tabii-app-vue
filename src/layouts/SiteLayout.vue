@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div class="overflow-x-hidden">
+    <!-- Arka plan görseli - Tüm sayfa boyunca -->
+    <img class="w-full fixed top-0 left-0 h-full object-cover" style="filter: brightness(0.5); z-index:-1;" src="https://cms-tabii-public-image.tabii.com/int/webp/w1600/q85/37964.jpeg">
+    
     <!-- Logolar ve üst menü -->
     <div class="flex flex-row justify-between w-full fixed top-0 z-50">
       <div class="py-8 px-24">
@@ -37,9 +40,6 @@
 
     <!-- Banner Section -->
     <div class="relative min-h-screen">
-      <!-- Background Image -->
-      <img class="absolute inset-0 w-full h-full object-cover" style="filter: brightness(0.5);" src="https://cms-tabii-public-image.tabii.com/int/webp/w1600/q85/37964.jpeg">
-      
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
       
@@ -73,8 +73,9 @@
     </div>
 
     <!-- Movie Slider Section -->
-    <div class="bg-black py-16">
-      <div class="container mx-auto px-8">
+    <div class="relative py-16">
+      <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+      <div class="container mx-auto px-8 relative z-10">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
           tabii'ye Özel İçerikler
         </h2>
@@ -125,8 +126,9 @@
     </div>
 
     <!-- Family Content Section -->
-    <div class="bg-black py-20">
-      <div class="container mx-auto px-8">
+    <div class="relative py-20">
+      <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+      <div class="container mx-auto px-8 relative z-10">
         <!-- Main Title with Shield Icon -->
         <div class="text-center mb-16">
           <div class="flex justify-center items-center mb-6">
@@ -149,7 +151,7 @@
           <div class="space-y-12">
             <!-- Children Block -->
             <div>
-              <h3 class="text-3xl font-bold text-green-400 mb-4">
+              <h3 class="text-3xl font-bold text-green-400 mb-4 title">
                 Çocuklar
               </h3>
               <p class="text-xl text-white leading-relaxed">
@@ -171,47 +173,21 @@
           <!-- Right Side - Illustration -->
           <div class="relative">
             <!-- Abstract Background Shapes -->
-            <div class="absolute inset-0">
+            <div>
               <!-- Large Green Star/Burst Shape -->
-              <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-green-400 rounded-full opacity-20"></div>
+              <img src="https://cms-tabii-public-image.tabii.com/int/webp/shield-bg.png" class="w-full h-full object-cover">
               
               <!-- Diagonal White Stripe -->
               <div class="absolute bottom-0 right-0 w-32 h-96 bg-white opacity-10 transform rotate-45 origin-bottom-right"></div>
             </div>
 
             <!-- Characters Container -->
-            <div class="relative z-10 flex items-end justify-center h-96">
-              <!-- Left Child (Boy) -->
-              <div class="flex flex-col items-center mr-8">
-                <div class="w-16 h-16 bg-yellow-400 rounded-full mb-2"></div>
-                <div class="w-12 h-8 bg-blue-500 rounded-lg"></div>
-                <div class="w-8 h-6 bg-blue-600 rounded"></div>
-              </div>
+            <div class="relative z-10 flex items-end justify-center h-6">
+              
+              
 
-              <!-- Middle Child (Girl with Pigtails) -->
-              <div class="flex flex-col items-center mx-4">
-                <div class="w-16 h-16 bg-red-400 rounded-full mb-2"></div>
-                <div class="w-14 h-10 bg-blue-300 rounded-lg"></div>
-                <div class="w-10 h-6 bg-white rounded"></div>
-              </div>
+             
 
-              <!-- Dog -->
-              <div class="flex flex-col items-center mx-4">
-                <div class="w-14 h-12 bg-brown-400 rounded-full mb-2"></div>
-                <div class="w-12 h-8 bg-brown-500 rounded-lg"></div>
-                <div class="w-8 h-4 bg-pink-400 rounded-full"></div>
-                <!-- Orange Paint Tube -->
-                <div class="w-6 h-8 bg-orange-500 rounded-full mt-2"></div>
-              </div>
-
-              <!-- Right Child (Girl with Glasses) -->
-              <div class="flex flex-col items-center ml-8">
-                <div class="w-16 h-16 bg-brown-300 rounded-full mb-2"></div>
-                <div class="w-12 h-8 bg-yellow-400 rounded-lg"></div>
-                <div class="w-10 h-6 bg-yellow-500 rounded"></div>
-                <!-- Glasses -->
-                <div class="w-8 h-4 bg-gray-300 rounded-full mt-1"></div>
-              </div>
             </div>
           </div>
         </div>
@@ -219,8 +195,9 @@
     </div>
 
     <!-- Enjoy It Section -->
-    <div class="bg-black py-20">
-      <div class="container mx-auto px-8">
+    <div class="relative py-20">
+      <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+      <div class="container mx-auto px-8 relative z-10">
         <!-- Main Title -->
         <div class="text-center mb-20">
           <h2 class="text-5xl md:text-6xl font-bold text-white mb-4">
@@ -232,138 +209,16 @@
         </div>
 
         <!-- Device Screens Container -->
-        <div class="relative max-w-7xl mx-auto">
-          <!-- Large TV/Monitor Screen (Center-Top) -->
-          <div class="relative z-20 mx-auto w-full max-w-4xl mb-8">
-            <div class="relative overflow-hidden rounded-2xl border-4 border-green-400 shadow-2xl shadow-green-400/50">
-              <!-- FREE SKY Content -->
-              <div class="relative h-96 bg-gradient-to-r from-blue-900 to-gray-800">
-                <!-- Background Image Placeholder -->
-                <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800 to-gray-700"></div>
-                
-                <!-- Content Overlay -->
-                <div class="absolute inset-0 p-8 flex flex-col justify-between">
-                  <!-- Top Section -->
-                  <div>
-                    <h3 class="text-4xl font-bold text-white mb-2">FREE SKY</h3>
-                    <p class="text-xl text-gray-300">Action - Adventure</p>
-                  </div>
-                  
-                  <!-- Middle Section -->
-                  <div class="flex-1 flex items-center">
-                    <p class="text-lg text-white max-w-md">
-                      Under the leadership of Lieutenant Colonel Alper, a team is formed for a n...
-                    </p>
-                  </div>
-                  
-                  <!-- Bottom Section -->
-                  <div class="flex justify-between items-end">
-                    <span class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
-                      New Episodes
-                    </span>
-                    <div class="flex gap-4">
-                      <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-bold transition-colors">
-                        Play
-                      </button>
-                      <button class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-black transition-colors">
-                        Detail
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Laptop Screen (Bottom-Left) -->
-          <div class="absolute left-0 bottom-0 z-10 w-80">
-            <div class="relative overflow-hidden rounded-lg border-4 border-green-400 shadow-2xl shadow-green-400/50">
-              <div class="bg-gray-900 p-6">
-                <!-- RŪMÍ Content -->
-                <div class="mb-6">
-                  <h4 class="text-2xl font-bold text-white mb-2">RŪMÍ</h4>
-                  <p class="text-sm text-gray-300 mb-4">
-                    The life and teachings of the 13th century sufi poet Rumi, whose wind...
-                  </p>
-                  <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-bold transition-colors">
-                    Play
-                  </button>
-                </div>
-                
-                <!-- Continue Watching -->
-                <div>
-                  <h5 class="text-sm font-bold text-white mb-3">Continue Watching</h5>
-                  <div class="flex gap-2">
-                    <div class="w-16 h-20 bg-blue-600 rounded"></div>
-                    <div class="w-16 h-20 bg-green-600 rounded"></div>
-                    <div class="w-16 h-20 bg-purple-600 rounded"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tablet Screen (Center-Right) -->
-          <div class="absolute right-20 top-1/2 transform -translate-y-1/2 z-10 w-64">
-            <div class="relative overflow-hidden rounded-lg border-4 border-green-400 shadow-2xl shadow-green-400/50">
-              <div class="bg-gray-800 p-4">
-                <div class="grid grid-cols-2 gap-2">
-                  <div class="bg-blue-600 rounded h-20 flex items-center justify-center">
-                    <span class="text-white text-sm font-bold">MARRIAGE</span>
-                  </div>
-                  <div class="bg-green-600 rounded h-20 flex items-center justify-center">
-                    <span class="text-white text-sm font-bold">ISKENDER</span>
-                  </div>
-                  <div class="bg-purple-600 rounded h-20 flex items-center justify-center">
-                    <span class="text-white text-sm font-bold">GASSAL</span>
-                  </div>
-                  <div class="bg-red-600 rounded h-20 flex items-center justify-center">
-                    <span class="text-white text-sm font-bold">YANKI</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Phone Screen (Bottom-Right) -->
-          <div class="absolute right-0 bottom-0 z-10 w-48">
-            <div class="relative overflow-hidden rounded-lg border-4 border-green-400 shadow-2xl shadow-green-400/50">
-              <div class="bg-gray-900 p-4">
-                <!-- INNOCENTS Content -->
-                <div class="mb-4">
-                  <h4 class="text-lg font-bold text-white mb-2">INNOCENTS</h4>
-                  <div class="w-full h-24 bg-blue-700 rounded mb-3"></div>
-                </div>
-                
-                <!-- Navigation -->
-                <div class="flex justify-between text-xs text-white">
-                  <span class="bg-green-500 px-2 py-1 rounded">Play</span>
-                  <span>Episodes</span>
-                  <span>Cast</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Vertical Poster (Far Right) -->
-          <div class="absolute right-0 top-0 z-10 w-32">
-            <div class="relative overflow-hidden rounded-lg border-4 border-green-400 shadow-2xl shadow-green-400/50">
-              <div class="bg-green-500 h-96 flex flex-col items-center justify-center p-4">
-                <div class="space-y-2">
-                  <div class="w-16 h-20 bg-white rounded"></div>
-                  <div class="w-16 h-20 bg-white rounded"></div>
-                  <div class="w-16 h-20 bg-white rounded"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+         <div class="flex justify-center items-center">
+          <img src="https://cms-tabii-public-static.tabii.com/assets/devices2.png" alt="">
+         </div>
       </div>
     </div>
 
     <!-- Supported Devices Section -->
-    <div class="bg-black py-16">
-      <div class="container mx-auto px-8">
+    <div class="relative py-16">
+      <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+      <div class="container mx-auto px-8 relative z-10">
         <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
                      <!-- Telefon -->
            <div class="flex items-center gap-3">
@@ -428,175 +283,28 @@
       </div>
     </div>
 
-    <!-- New Journey Section -->
-    <div class="bg-black py-20">
-      <div class="container mx-auto px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <!-- Left Side - Three Vertical Movie Posters -->
-          <div class="space-y-8">
-                         <!-- RÜMİ Poster -->
-             <div class="relative w-80 h-96 mx-auto">
-               <div class="absolute inset-0 bg-gradient-to-b from-brown-800 to-brown-900 rounded-lg overflow-hidden">
-                 <!-- Background Pattern -->
-                 <div class="absolute inset-0 opacity-30">
-                   <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-brown-600 to-brown-800"></div>
-                 </div>
-                 
-                 <!-- Character Silhouette (Red Robe) -->
-                 <div class="absolute bottom-0 left-0 w-full h-3/4">
-                   <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-48 bg-red-800 rounded-t-full"></div>
-                   <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white rounded-full"></div>
-                   <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 w-20 h-8 bg-brown-800 rounded-full"></div>
-                 </div>
-                 
-                 <!-- Light Rays (Golden) -->
-                 <div class="absolute top-0 right-0 w-full h-full">
-                   <div class="absolute top-0 right-0 w-32 h-32 bg-amber-300 transform rotate-45 origin-top-right opacity-60"></div>
-                   <div class="absolute top-8 right-8 w-24 h-24 bg-amber-200 transform rotate-45 origin-top-right opacity-40"></div>
-                   <div class="absolute top-16 right-16 w-16 h-16 bg-amber-100 transform rotate-45 origin-top-right opacity-30"></div>
-                 </div>
-                 
-                 <!-- Title -->
-                 <div class="absolute top-8 left-8">
-                   <h3 class="text-4xl font-bold text-amber-300">RÜMİ</h3>
-                 </div>
-               </div>
-             </div>
-
-                         <!-- LITTLE ARCHER İSKENDER Poster -->
-             <div class="relative w-80 h-96 mx-auto">
-               <div class="absolute inset-0 bg-gradient-to-b from-emerald-900 to-black rounded-lg overflow-hidden">
-                 <!-- Background Pattern -->
-                 <div class="absolute inset-0 opacity-30">
-                   <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-emerald-700 to-emerald-900"></div>
-                 </div>
-                 
-                 <!-- Dome Building -->
-                 <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-48 h-32 bg-emerald-800 rounded-t-full"></div>
-                 
-                 <!-- Character (Young Man with Plaid Shirt) -->
-                 <div class="absolute bottom-8 left-8">
-                   <div class="w-16 h-16 bg-amber-300 rounded-full mb-2"></div>
-                   <div class="w-12 h-8 bg-blue-600 rounded-lg"></div>
-                   <div class="w-8 h-6 bg-blue-700 rounded"></div>
-                 </div>
-                 
-                 <!-- Mystical Object (Triangle with Lightning) -->
-                 <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                   <div class="w-20 h-20 bg-amber-400 transform rotate-45 opacity-80"></div>
-                   <div class="absolute inset-0 bg-amber-300 transform rotate-45 scale-75 opacity-60"></div>
-                   <div class="absolute inset-0 bg-amber-200 transform rotate-45 scale-50 opacity-40"></div>
-                 </div>
-                 
-                 <!-- Masked Figure (Dark Cloak) -->
-                 <div class="absolute top-16 right-8">
-                   <div class="w-12 h-16 bg-gray-800 rounded-full"></div>
-                   <div class="absolute top-2 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gray-600 rounded-full"></div>
-                 </div>
-                 
-                 <!-- Titles -->
-                 <div class="absolute bottom-8 left-8">
-                   <h4 class="text-sm font-bold text-amber-300 mb-1">LITTLE ARCHER</h4>
-                   <h3 class="text-3xl font-bold text-amber-300">İSKENDER</h3>
-                 </div>
-               </div>
-             </div>
-
-                         <!-- THE LAST DAY Poster -->
-             <div class="relative w-80 h-96 mx-auto">
-               <div class="absolute inset-0 bg-gradient-to-b from-emerald-900 to-black rounded-lg overflow-hidden">
-                 <!-- Background Pattern -->
-                 <div class="absolute inset-0 opacity-30">
-                   <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-emerald-700 to-emerald-900"></div>
-                 </div>
-                 
-                 <!-- Multiple Faces Collage (3x3 Grid) -->
-                 <div class="absolute inset-0 p-4">
-                   <div class="grid grid-cols-3 gap-2 h-full">
-                     <div class="w-full h-20 bg-gray-600 rounded"></div>
-                     <div class="w-full h-20 bg-gray-500 rounded"></div>
-                     <div class="w-full h-20 bg-gray-700 rounded"></div>
-                     <div class="w-full h-20 bg-gray-800 rounded"></div>
-                     <div class="w-full h-20 bg-gray-600 rounded"></div>
-                     <div class="w-full h-20 bg-gray-500 rounded"></div>
-                     <div class="w-full h-20 bg-gray-700 rounded"></div>
-                     <div class="w-full h-20 bg-gray-800 rounded"></div>
-                     <div class="w-full h-20 bg-gray-600 rounded"></div>
-                   </div>
-                 </div>
-                 
-                 <!-- Foreground Characters (Old Man and Young Man) -->
-                 <div class="absolute bottom-8 left-8">
-                   <div class="flex items-end gap-4">
-                     <div class="w-16 h-20 bg-white rounded"></div>
-                     <div class="w-12 h-16 bg-gray-300 rounded"></div>
-                   </div>
-                 </div>
-                 
-                 <!-- Title -->
-                 <div class="absolute bottom-8 left-8">
-                   <h3 class="text-2xl font-bold text-white">THE LAST DAY</h3>
-                 </div>
-               </div>
-             </div>
-          </div>
-
-          <!-- Right Side - Promotional Content -->
-          <div class="text-center lg:text-left">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Yeni bir yolculuğa çıkmak için hazır mısın?
-            </h2>
-            <p class="text-xl md:text-2xl text-white mb-8">
-              İzlemek için şimdi kaydol
-            </p>
-            <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-xl transition-colors duration-200 transform hover:scale-105">
-              Şimdi izle
-            </button>
+    <div class="relative py-20">
+      <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+      <div class="container mx-auto px-8 relative z-10">
+        <div class="flex flex-row justify-center items-center absolute inset-0 bg-black bg-opacity-80 gap-4">
+          <div>
+            <img src="https://cms-tabii-public-static.tabii.com/assets/journeys_with_bg.jpg" alt="" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Bottom Divider -->
-    <div class="w-full h-px bg-white opacity-20"></div>
-
     <!-- Pricing Plans Section -->
-    <div class="bg-black py-20">
-      <div class="container mx-auto px-8">
+    <div class="relative py-20">
+      <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+      <div class="container mx-auto px-8 relative z-10">
         <!-- Header Section -->
-        <div class="flex flex-col lg:flex-row justify-between items-center mb-16">
-          <!-- Left Side - Logo -->
-          <div class="flex items-center mb-8 lg:mb-0">
-            <div class="w-8 h-8 bg-green-500 rounded-full mr-3"></div>
-            <span class="text-white text-2xl font-bold">tabii</span>
-          </div>
-          
+        <div class="flex flex-col lg:flex-row justify-center items-center mb-16">
           <!-- Center - Main Title -->
-          <div class="text-center mb-8 lg:mb-0">
+          <div class="text-center">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-300">
               tabii'yi Keşfetmeye Şimdi Başla!
             </h1>
-          </div>
-          
-          <!-- Right Side - Language and Button -->
-          <div class="flex items-center gap-4">
-            <!-- Language Dropdown -->
-            <div class="relative inline-block text-left">
-              <button class="flex justify-center items-center gap-2 h-12 w-32 bg-transparent text-white font-bold text-lg rounded px-4 border border-gray-600">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-                </svg>
-                Türkçe
-                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                </svg>
-              </button>
-            </div>
-            
-            <!-- Start Discovering Button -->
-            <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors duration-200">
-              Keşfetmeye Başla
-            </button>
           </div>
         </div>
 
@@ -678,8 +386,134 @@
       </div>
     </div>
 
-    <div class="flex items-center justify-center py-4" style="background-color: #000000;">
-      <!-- İçerik alanı -->
+    <!-- Live Broadcasts Section -->
+    <div class="relative py-20">
+      <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+      <div class="container mx-auto px-8 relative z-10">
+        <!-- Header Section -->
+        <div class="flex justify-between items-start mb-12">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+              Canlı Yayınlar
+            </h2>
+            <p class="text-lg text-white">
+              TRT'nin tüm kanallarını izleyebilirsin.
+            </p>
+          </div>
+          <!-- Navigation Arrow -->
+          <button class="text-white hover:text-green-400 transition-colors duration-200">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- TRT Channels Slider -->
+        <div class="relative">
+          <!-- Left Navigation Button -->
+          <button 
+            @click="slideChannelsLeft" 
+            class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-black bg-opacity-50 text-white p-3 hover:bg-opacity-75 rounded-full transition-all duration-200"
+            :class="{ 'opacity-50 cursor-not-allowed': channelOffset >= 0 }"
+            :disabled="channelOffset >= 0"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+
+          <!-- Right Navigation Button -->
+          <button 
+            @click="slideChannelsRight" 
+            class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-black bg-opacity-50 text-white p-3 hover:bg-opacity-75 rounded-full transition-all duration-200"
+            :class="{ 'opacity-50 cursor-not-allowed': channelOffset <= -1200 }"
+            :disabled="channelOffset <= -1200"
+          >
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+
+          <!-- Channels Container -->
+          <div class="overflow-hidden">
+            <div 
+              class="flex gap-6 transition-transform duration-300 ease-in-out" 
+              :style="{ transform: `translateX(${channelOffset}px)` }"
+            >
+              <!-- TRT 1 -->
+              <div class="flex-shrink-0 bg-gray-800 rounded-lg p-6 min-w-[200px] hover:bg-gray-700 transition-colors duration-200 cursor-pointer">
+                <div class="text-center">
+                  <div class="text-white text-lg font-semibold mb-2">TRT</div>
+                  <div class="bg-red-600 text-white text-sm font-bold px-3 py-1 rounded">1</div>
+                </div>
+              </div>
+
+              <!-- TRT 2 -->
+              <div class="flex-shrink-0 bg-gray-800 rounded-lg p-6 min-w-[200px] hover:bg-gray-700 transition-colors duration-200 cursor-pointer">
+                <div class="text-center">
+                  <div class="text-white text-lg font-semibold mb-2">TRT</div>
+                  <div class="text-white text-sm font-bold px-3 py-1 rounded" style="font-family: cursive;">2</div>
+                </div>
+              </div>
+
+              <!-- TRT BELGESEL -->
+              <div class="flex-shrink-0 bg-gray-800 rounded-lg p-6 min-w-[200px] hover:bg-gray-700 transition-colors duration-200 cursor-pointer">
+                <div class="text-center">
+                  <div class="text-white text-lg font-semibold mb-2">TRT</div>
+                  <div class="text-yellow-400 text-sm font-bold px-3 py-1 rounded">BELGESEL</div>
+                </div>
+              </div>
+
+              <!-- TRT HABER -->
+              <div class="flex-shrink-0 bg-gray-800 rounded-lg p-6 min-w-[200px] hover:bg-gray-700 transition-colors duration-200 cursor-pointer">
+                <div class="text-center">
+                  <div class="text-white text-lg font-semibold mb-2">TRT</div>
+                  <div class="bg-red-600 text-white text-sm font-bold px-3 py-1 rounded">HABER</div>
+                </div>
+              </div>
+
+              <!-- TRT SPOR -->
+              <div class="flex-shrink-0 bg-gray-800 rounded-lg p-6 min-w-[200px] hover:bg-gray-700 transition-colors duration-200 cursor-pointer">
+                <div class="text-center">
+                  <div class="text-white text-lg font-semibold mb-2">TRT</div>
+                  <div class="text-green-400 text-sm font-bold px-3 py-1 rounded">SPOR</div>
+                </div>
+              </div>
+
+              <!-- TRT ÇOCUK -->
+              <div class="flex-shrink-0 bg-gray-800 rounded-lg p-6 min-w-[200px] hover:bg-gray-700 transition-colors duration-200 cursor-pointer">
+                <div class="text-center">
+                  <div class="text-white text-lg font-semibold mb-2">TRT</div>
+                  <div class="text-blue-400 text-sm font-bold px-3 py-1 rounded">ÇOCUK</div>
+                </div>
+              </div>
+
+              <!-- TRT MÜZİK -->
+              <div class="flex-shrink-0 bg-gray-800 rounded-lg p-6 min-w-[200px] hover:bg-gray-700 transition-colors duration-200 cursor-pointer">
+                <div class="text-center">
+                  <div class="text-white text-lg font-semibold mb-2">TRT</div>
+                  <div class="text-purple-400 text-sm font-bold px-3 py-1 rounded">MÜZİK</div>
+                </div>
+              </div>
+
+              <!-- TRT ARAPÇA -->
+              <div class="flex-shrink-0 bg-gray-800 rounded-lg p-6 min-w-[200px] hover:bg-gray-700 transition-colors duration-200 cursor-pointer">
+                <div class="text-center">
+                  <div class="text-white text-lg font-semibold mb-2">TRT</div>
+                  <div class="text-orange-400 text-sm font-bold px-3 py-1 rounded">ARAPÇA</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative flex items-center justify-center py-4">
+      <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+      <div class="relative z-10">
+        <!-- İçerik alanı -->
+      </div>
     </div>
   </div>
 </template>
@@ -692,56 +526,112 @@ export default {
       dropdownOpen: false,
       email: '',
       slideOffset: 0,
+      channelOffset: 0,
       movies: [
         {
           title: 'GASSAL',
           subtitle: '2. SEZON',
-          image: 'https://images.unsplash.com/photo-1518621736915-f3b1677b723b?q=80&w=400&h=600&fit=crop&auto=format&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/52568_0-0-2557-3840.png'
         },
         {
           title: 'SİYAH BERE',
           subtitle: '',
-          image: 'https://images.unsplash.com/photo-1534190760961-b5540790b12d?q=80&w=400&h=600&fit=crop&auto=format&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/52266_0-0-2557-3840.png'
         },
         {
-          title: '%iki',
+          title: 'YÜZDE İKİ',
           subtitle: '',
-          image: 'https://images.unsplash.com/photo-1507679799977-c9eb8fecf653?q=80&w=400&h=600&fit=crop&auto=format&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/51784_0-0-2557-3840.png'
         },
         {
           title: 'YANKI',
           subtitle: 'GÖRÜNMEZ EL',
-          image: 'https://images.unsplash.com/photo-1591696205602-2f950c417dd9?q=80&w=400&h=600&fit=crop&auto=format&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/49441_0-0-2557-3840.png'
         },
         {
           title: 'ÇIRAK',
           subtitle: '',
-          image: 'https://images.unsplash.com/photo-1517486804500-be261229047c?q=80&w=400&h=600&fit=crop&auto=format&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/43958_0-0-2557-3840.jpeg'
         },
         {
-          title: 'KIZILCIK ŞERBETİ',
+          title: 'KIZ BABASI',
           subtitle: '',
-          image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=600&fit=crop'
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/51984_0-0-2557-3840.png'
         },
         {
-          title: 'KAPLAN',
+          title: 'RÜYA GİBİ İSTANBUL',
           subtitle: '',
-          image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&h=600&fit=crop'
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/45878_0-0-2557-3840.png'
         },
         {
-          title: 'KÖK',
+          title: 'MEVLÂNÂ CELÂLEDDÎN-İ RÛMÎ',
           subtitle: '',
-          image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=600&fit=crop'
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/49576_0-0-2557-3840.png'
         },
         {
-          title: 'MAHREM',
+          title: 'MARNALI',
           subtitle: '',
-          image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&h=600&fit=crop'
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/43459_0-0-2557-3840.jpeg'
+        },
+        {
+          title: 'SÜRGÜNLER',
+          subtitle: '',
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/48189_0-0-2557-3840.png'
+        },
+        {
+          title: 'DERİN MOR',
+          subtitle: '',
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/35156_0-0-2557-3840.png'
+        },
+        {
+          title: 'ŞEYTAN ADASI\'NDA ESİR TÜRK: POLİS CEMİL',
+          subtitle: '',
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/51288_0-0-2557-3840.png'
+        },
+        {
+          title: 'CİHANGİR CUMHURİYETİ',
+          subtitle: '',
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/48761_0-0-2557-3840.png'
+        },
+        {
+          title: 'YEŞİL DENİZ MİLENYUM',
+          subtitle: '',
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/43850_0-0-2557-3840.png'
+        },
+        {
+          title: 'TOZKOPARAN İSKENDER GÖLGE',
+          subtitle: '',
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/22711_0-0-2557-3840.jpeg'
+        },
+        {
+          title: 'SON GÜN',
+          subtitle: '',
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/26447_0-0-2557-3840.png'
         },
         {
           title: 'AKİF',
           subtitle: '',
-          image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=600&fit=crop'
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/22004_0-0-2557-3840.jpeg'
+        },
+        {
+          title: 'AŞKIMIZ YETER',
+          subtitle: '',
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/37225_0-0-2557-3840.png'
+        },
+        {
+          title: 'DAYTON',
+          subtitle: '',
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/21964_0-0-2557-3840.jpeg'
+        },
+        {
+          title: 'İBN-İ SİNA',
+          subtitle: '',
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/46557_0-0-2557-3840.png'
+        },
+        {
+          title: 'KIZIL ELMA: BİR FETİH ÖYKÜSÜ',
+          subtitle: '',
+          image: 'https://cms-tabii-public-image.tabii.com/int/webp/w600/q84/25554_0-0-2557-3840.jpeg'
         }
       ]
     }
@@ -770,6 +660,19 @@ export default {
       if (this.slideOffset < maxOffset) {
         this.slideOffset = maxOffset;
       }
+    },
+    slideChannelsLeft() {
+      this.channelOffset += 300;
+      if (this.channelOffset > 0) {
+        this.channelOffset = 0;
+      }
+    },
+    slideChannelsRight() {
+      this.channelOffset -= 300;
+      const maxOffset = -(8 - 4) * 300; // 8 channels total, 4 visible at once
+      if (this.channelOffset < maxOffset) {
+        this.channelOffset = maxOffset;
+      }
     }
   },
   mounted() {
@@ -784,4 +687,120 @@ export default {
 
 <style scoped>
 /* Site layout'a özel stiller */
+</style>
+
+<style scoped>
+  /* Site layout'a özel stiller */
+  
+  /* Poppins font for all headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Poppins Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  /* Specific heading styles */
+  .text-5xl, .text-6xl, .text-7xl {
+    font-family: 'Poppins', 'Poppins Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+  }
+  
+  .text-3xl, .text-4xl {
+    font-family: 'Poppins', 'Poppins Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+  }
+  
+  .text-xl, .text-2xl {
+    font-family: 'Poppins', 'Poppins Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+  }
+.footer-section {
+  background-color: #000;
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.see-more-btn {
+  background-color: transparent;
+  color: #00ff99;
+  border: 2px solid #00ff99;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #00ff99;
+  color: #000;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  font-size: 16px;
+  margin-top: 40px;
+  color: #aaa;
+}
+
+.footer-bottom a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: #00ff99;
+}
+
+.copyright {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #999;
+}
+
+.footer-section {
+  background-color: #000;
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+.see-more-btn {
+  background-color: transparent;
+  color: #00ff99;
+  border: 2px solid #00ff99;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.see-more-btn:hover {
+  background-color: #00ff99;
+  color: #000;
+}
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  font-size: 16px;
+  margin-top: 40px;
+  color: #aaa;
+}
+.footer-bottom a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-bottom a:hover {
+  color: #00ff99;
+}
+.copyright {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #999;
+}
 </style>
